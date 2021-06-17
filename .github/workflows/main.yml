@@ -1,9 +1,10 @@
+# https://github.com/GuillaumeFalourd/poc-github-actions/actions/runs/944957106/workflow
 name: Vaccine Reporter - BS4 Workflow
 
 on:
   schedule:
-  - cron: "0 5 * * *" 
-  - cron: "55 20 * * *" 
+  - cron: "55 4 * * *" 
+  - cron: "50 20 * * *" 
   workflow_dispatch:
 
 jobs:
