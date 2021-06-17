@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import pandas as pd
+import datetime
 
 def table_gather():
     html = urlopen("https://covid19asi.saglik.gov.tr").read().decode('utf-8')
