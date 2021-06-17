@@ -16,13 +16,13 @@ def table_gather():
         sum_vac = soup.find_all('div', class_='svg-turkiye-haritasi')[0].find_all('g')[0].find_all("g")[i].get("data-toplam")
         df_.append((city, first_vac, sec_vac, sum_vac))
     df = pd.DataFrame(df_, columns=["Sehir", "Ilk Doz", "Ikinci Doz", "Toplam Doz"])
-    dttime = datetime.date.strftime(datetime.datetime.today(), format = "%d/%m/%Y %H:%S")
+    dttime = datetime.date.strftime(datetime.datetime.today(), format = "%d/%m/%Y-%H:%S")
     date = datetime.date.strftime(datetime.datetime.today(), format = "%d/%m/%Y")
     
     return df, dttime, date
     
-    df, dttime, date = table_gather()
-    df.to_csv("df-%s.csv"%date, index = None)
-    print(date)
-    print(dttime)
-    
+df, dttime, date = table_gather()
+df.to_csv("df-%s.csv"%dttime, index = None)
+print(date)
+print(dttime)
+
