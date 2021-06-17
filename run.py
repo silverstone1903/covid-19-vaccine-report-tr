@@ -22,13 +22,20 @@ def table_gather():
     df["Toplam Doz"]= df["Toplam Doz"].str.replace(".", "").astype(int)
     df["Calisma Zamani"] = datetime.date.strftime(datetime.datetime.today(), format = "%d/%m/%Y %H:%S")
     
-    dttime = dttime = datetime.date.strftime(datetime.datetime.today(), format = "%d-%m-%Y_%H:%S")
+    dttime = datetime.date.strftime(datetime.datetime.today(), format = "%d-%m-%Y_%H_%S")
     date = datetime.date.strftime(datetime.datetime.today(), format = "%d/%m/%Y")
     
     return df, dttime, date
     
 df, dttime, date = table_gather()
-df.to_csv("data/df-%s.csv"%dttime, index = None)
+print("Data gathered")
+name = "data/df-%s.json"%dttime
+print(name)
 print(date)
 print(dttime)
+df.to_json(name)
+hs = open("data/files.txt","a")
+hs.write(name + "\n")
+hs.close() 
+print("Done..!)
 
