@@ -1,9 +1,9 @@
-name: BS4 Workflow
+name: Vaccine Reporter - BS4 Workflow
 
 on:
   schedule:
-  - cron: "5 * * * *" # 
-  timezone: "Asia/Tokyo"
+  - cron: "0 5 * * *" 
+  - cron: "55 20 * * *" 
   workflow_dispatch:
 
 jobs:
@@ -12,17 +12,17 @@ jobs:
 
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v2 # Checkout the repository content to github runner.
+        uses: actions/checkout@v2 
 
       - name: Setup Python Version
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8 # Install the python version needed
+          python-version: 3.7 
 
-      - name: Install Python dependencies
+      - name: Install Python packages
         run: python -m pip install --upgrade pip requests bs4 pandas urllib3 lxml
 
-      - name: Execute Python script # Run the run.py to get the latest data
+      - name: Execute Python script # 
         run: |
           python run.py
       - name: Commit and Push new file
