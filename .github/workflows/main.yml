@@ -3,6 +3,7 @@ name: BS4 Workflow
 on:
   schedule:
   - cron: "5 * * * *" # 
+  timezone: "Asia/Tokyo"
   workflow_dispatch:
 
 jobs:
