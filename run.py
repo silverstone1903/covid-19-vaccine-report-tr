@@ -23,7 +23,7 @@ def table_gather():
     return df, dttime, date
     
 df, dttime, date = table_gather()
-df.to_csv("df-%s.csv"%dttime, index = None)
+df.to_csv("data/df-%s.csv"%dttime, index = None)
 print(date)
 print(dttime)
 
