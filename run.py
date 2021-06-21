@@ -40,7 +40,7 @@ def table_gather():
     date_time = dod + str(" ") + tod
     df["Calisma Zamani"] = date_time
     df["Tarih"] = pd.to_datetime(tod)
-    dttime = df.Tarih.dt.strftime("%d_%m_%Y_%H_%S")[0]
+    dttime = str(df.Tarih.dt.strftime("%d_%m_%Y")[0]) + str("_") + tod.replace(":", "_")
 
     return df, dttime, date_time
     
