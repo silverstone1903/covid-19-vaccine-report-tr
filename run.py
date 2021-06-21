@@ -1,19 +1,9 @@
+import warnings
+warnings.filterwarnings("ignore")
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import pandas as pd
 import datetime
-
-def month_replacer_list(l):
-    l = (l.replace("Ocak", "/01/").replace("Şubat", "/02/").replace(
-        "Mart",
-        "/03/").replace("Nisan", "/04/").replace("Mayıs", "/05/").replace(
-            "Haziran", "/06/").replace("Temmuz", "/07/").replace(
-                "Ağustos", "/08/").replace("Eylül", "/09/").replace(
-                    "Ekim",
-                    "/10/").replace("Kasım",
-                                    "/11/").replace("Aralık",
-                                                    "/12/")).replace(" ", "")
-    return datetime.date.strftime(pd.to_datetime(l), format="%d/%m/%Y")
 
 def table_gather():
     html = urlopen("https://covid19asi.saglik.gov.tr").read().decode('utf-8')
@@ -55,12 +45,16 @@ def table_gather():
     return df, dttime, date_time
     
 df, dttime, date = table_gather()
+
 print("Data gathered")
 name = "data/df-%s.json"%dttime
+
 print(name)
 print(date)
 print(dttime)
+
 df.to_json(name)
+
 hs = open("data/files.txt","a")
 hs.write(name + "\n")
 hs.close() 
