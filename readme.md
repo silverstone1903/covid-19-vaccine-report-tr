@@ -1,5 +1,7 @@
 ## Türkiye Covid-19 Günlük Aşılama Tablosu
 
+[![Vaccine Reporter - BS4 Workflow](https://github.com/silverstone1903/covid-19-vaccine-report-tr/actions/workflows/main.yml/badge.svg)](https://github.com/silverstone1903/covid-19-vaccine-report-tr/actions/workflows/main.yml)
+
 Github Actions kullanılarak [Sağlık Bakanlığı COVID-19 Aşısı Bilgilendirme Platformu](https://covid19asi.saglik.gov.tr/)'ndan günlük olarak (sabah ve akşam) çekilen veri görselleştirilmiştir. Veri [bs4](https://github.com/silverstone1903/covid-19-vaccine-report-tr/blob/main/run.py) kullanılarak data frame haline getirilerek elde edildiği tarih bilgisi ile *json* formatında `data` klasörüne yazılmaktadır. Bir gün içerisinde yapılan toplam aşıyı görmek adına sabah 7.55 ve gece 23.55'te çalışacak şekilde actions script'i düzenlenmiştir. Bir önceki güne ait dosya isimlerini alabilmek için de script [sonuna](https://github.com/silverstone1903/covid-19-vaccine-report-tr/blob/main/run.py#L58) yazılan dosya isimlerinin tutulduğu `files.txt` eklenmiştir. Böylece önceki güne ait veriler bu listeden okunabilmektedir. Github Pages kullanılarak repo pages haline getirilmiş ve böylece yazılan verilere github.io üzerinden ulaşılabilmektedir. 
 
 
