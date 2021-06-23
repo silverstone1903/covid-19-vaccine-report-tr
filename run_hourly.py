@@ -54,6 +54,4 @@ print(date)
 print(dttime)
 
 df.to_json(name)
-
-
 print("Done..!")
