@@ -54,4 +54,9 @@ print(date)
 print(dttime)
 
 df.to_json(name)
+
+file_list = open("data/hourly/files.txt","a")
+file_list.write(name + "\n")
+file_list.close() 
+
 print("Done..!")
