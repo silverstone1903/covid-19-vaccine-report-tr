@@ -13,9 +13,20 @@ data/df-21_06_2021_08_00.json
 data/df-21_06_2021_23_49.json
 data/df-22_06_2021_08_03.json
 ```
+Geriye dönük analiz yapabilmek adına (Shiny uygulaması yapmak üzere) `data/hourly` klasörü altında saatlik çalışan script sonucunda elde edilen `json`'lar bulunmaktadır. 
 
-Bu şekilde önceki güne ait ve sabah elde edilen veriler kullanılarak bir önceki gün şehirlere göre yapılan toplam aşılar görselleştirilmektedir. Sabah elde edilen veri de o güne kadar ki şehirlere göre yapılan toplam aşılamayı tablo olarak göstermektedir.
+```
+$ curl https://silverstone1903.github.io/covid-19-vaccine-report-tr/data/hourly/files.txt
+data/hourly/df-23_06_2021_15_21.json
+data/hourly/df-23_06_2021_16_17.json
+data/hourly/df-23_06_2021_17_13.json
+data/hourly/df-23_06_2021_18_17.json
+```
+
+
+Önceki güne ait sabah ve geceki veriler ile bir önceki gün şehirlere göre yapılan toplam aşılama görselleştirilmektedir. Sabah elde edilen veri de o güne kadar ki şehirlere göre yapılan toplam aşılamayı tablo olarak göstermektedir. Her gün sabah 9.30'da çalışarak [günlük tablolar](https://silverstone1903.github.io/projects/Covid19-Visualizations/) ile birlikte ilgili repo'ya push'lanmaktadır.
+
+
+
 
 [Günlük Aşılama Raporu](https://silverstone1903.github.io/daily-covid19-data-table/tables/Covid19AsiTurkiye.html)
-
-`data/hourly` klasörü altında saatlik çalışan script sonucunda elde edilen `json`'lar bulunmaktadır. 
