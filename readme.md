@@ -16,3 +16,4 @@ Bu şekilde önceki güne ait ve sabah elde edilen veriler kullanılarak bir ön
 
 [Günlük Aşılama Raporu](https://silverstone1903.github.io/daily-covid19-data-table/tables/Covid19AsiTurkiye.html)
 
+`data/hourly` klasörü altında saatlik çalışan script sonucunda elde edilen `json`'lar bulunmaktadır. 
