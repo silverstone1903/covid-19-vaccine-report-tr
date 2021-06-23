@@ -59,7 +59,7 @@ hr = df.Tarih.dt.hour[0]
 if hr >= 23 or hr <= 8:
     file_list = open("data/files.txt","a")
     file_list.write(name + "\n")
-    hfile_list.close() 
+    file_list.close() 
 
 print("Done..!")
 
