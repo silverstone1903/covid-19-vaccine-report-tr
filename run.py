@@ -56,7 +56,7 @@ print(dttime)
 df.to_json(name)
 
 hr = df.Tarih.dt.hour[0]
-if hr >= 23 or hr <= 8:
+if hr >= 23 or hr <= 9:
     file_list = open("data/files.txt","a")
     file_list.write(name + "\n")
     file_list.close() 
