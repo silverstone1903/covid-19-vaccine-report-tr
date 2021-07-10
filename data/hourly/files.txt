@@ -384,3 +384,4 @@ data/hourly/df-09_07_2021_02_15.json
 data/hourly/df-10_07_2021_03_55.json
 data/hourly/df-10_07_2021_04_57.json
 data/hourly/df-10_07_2021_05_31.json
+data/hourly/df-10_07_2021_06_19.json
