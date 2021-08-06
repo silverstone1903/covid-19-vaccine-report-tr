@@ -1005,3 +1005,4 @@ data/hourly/df-05_08_2021_00_16.json
 data/hourly/df-05_08_2021_01_16.json
 data/hourly/df-05_08_2021_02_16.json
 data/hourly/df-06_08_2021_04_00.json
+data/hourly/df-06_08_2021_05_26.json
