@@ -1310,3 +1310,4 @@ data/hourly/df-18_08_2021_02_17.json
 data/hourly/df-19_08_2021_03_49.json
 data/hourly/df-19_08_2021_04_49.json
 data/hourly/df-19_08_2021_05_25.json
+data/hourly/df-19_08_2021_06_19.json
